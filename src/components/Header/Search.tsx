@@ -4,7 +4,7 @@ const Search: React.FC = (): React.ReactElement => {
   const { t } = useTranslation();
   return (
     <form action="#">
-      <div className="hidden md:flex relative">
+      <div className="hidden md:flex relative h-10">
         <div className="inline-flex items-center justify-center absolute left-0 top-0 h-full w-10 text-gray-400">
           <svg
             className="h-6 w-6"

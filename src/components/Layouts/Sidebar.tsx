@@ -1,5 +1,4 @@
 import { Icon, Sidebar } from "@UI";
-
 import { useMediaQuery, useToggleDrawer } from "hooks";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
@@ -11,7 +10,7 @@ const Layouts: React.FC = (): React.ReactElement => {
   const matches = useMediaQuery("(min-width:600px)");
   const { state, toggleDrawer } = useToggleDrawer();
 
-  const classes = `shadow flex flex-col bg-tahiti w-72 fixed top-0 start-0 bottom-0 z-50 `;
+  const classes = `shadow flex flex-col bg-tahiti w-72 fixed top-0 start-0 bottom-0 z-50`;
 
   const sidebar = (
     <>

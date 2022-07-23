@@ -1,57 +1,63 @@
 export const menu = [
   {
     id: 1,
-    name: "doshboard",
+    name: "dashboard",
     href: "/",
     icon: "display",
   },
   {
     id: 2,
-    name: "my turns",
-    href: "/",
+    name: "my-turns",
+    href: "/my-turns",
     icon: "doctor",
     submenu: [
-      { id: 1, name: "Next turns", href: "/next-turns" },
-      { id: 2, name: "History", href: "/history" },
+      { id: 1, name: "next-turns", href: "/next-turns" },
+      { id: 2, name: "history", href: "/history" },
     ],
   },
   {
     id: 3,
-    name: "my childes",
-    href: "/",
+    name: "my-children",
+    href: "/my-children",
     icon: "children",
     submenu: [
-      { id: 1, name: "Children's show", href: "/children-show" },
+      { id: 1, name: "children-show", href: "/children-show" },
       {
         id: 2,
-        name: "New child registration",
+        name: "new-child-registration",
         href: "/new-child-registration",
       },
     ],
   },
   {
     id: 4,
-    name: "Reminder of the turn",
+    name: "reminder-turn",
     href: "/reminder-turn",
     icon: "bellOn",
   },
   {
     id: 5,
-    name: "my cities",
+    name: "my-cities",
     href: "/my-cities",
     icon: "city",
   },
   {
     id: 6,
-    name: "results of the experiment",
+    name: "results-experiment",
     href: "/results-experiment",
     icon: "flask",
   },
   {
     id: 7,
-    name: "health calculator",
+    name: "health-calculator",
     href: "/health-calculator",
     icon: "heartPulse",
-    submenu: [{ id: 1, name: "Child growth control robots", href: "/" }],
+    submenu: [
+      {
+        id: 1,
+        name: "child-growth-control-robots",
+        href: "/child-growth-control-robots",
+      },
+    ],
   },
 ];

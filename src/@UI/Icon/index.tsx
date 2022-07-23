@@ -12,6 +12,10 @@ import { ReactComponent as HeartPulse } from "./svgs/light/heart-pulse.svg";
 import { ReactComponent as Doctor } from "./svgs/light/user-doctor.svg";
 import { ReactComponent as Bars } from "./svgs/light/bars.svg";
 import { ReactComponent as Logout } from "./svgs/light/arrow-right-from-bracket.svg";
+import { ReactComponent as Login } from "./svgs/light/arrow-right-to-bracket.svg";
+import { ReactComponent as Moon } from "./svgs/light/moon.svg";
+import { ReactComponent as Sun } from "./svgs/light/sun-bright.svg";
+import { ReactComponent as Close } from "./svgs/light/xmark.svg";
 
 const SpanStyled = styled("span")<{ size: number }>(({ size }) => ({
   svg: {
@@ -45,6 +49,10 @@ const iconTypes: IconTypes = {
   chevronRight: ChevronRight,
   bars: Bars,
   logout: Logout,
+  moon: Moon,
+  sun: Sun,
+  login: Login,
+  close: Close,
 };
 
 const Icon = ({

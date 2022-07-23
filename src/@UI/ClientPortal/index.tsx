@@ -1,79 +1,26 @@
-import { useEffect, useRef, useState } from "react";
-import Portal from "./Portal";
+import { useEffect, useMemo } from "react";
+import { createPortal } from "react-dom";
 
-interface Propss {
-  open: boolean;
-  onClose: any;
-  children: React.ReactNode;
+interface Props {
+  children?: React.ReactNode;
+  parent?: HTMLElement;
   className?: string;
 }
 
-export default function Sidebar(props: Propss) {
-  const { open, onClose, children, className } = props;
-
-  const [active, setActive] = useState(false);
-  const backdrop = useRef<HTMLDivElement>(null);
-
+function Portal({ children, parent, className }: Props) {
+  const el = useMemo(() => document.createElement("div"), []);
   useEffect(() => {
-    const { current } = backdrop;
-
-    const transitionEnd = () => setActive(open);
-
-    const keyHandler = (e: any) =>
-      [27].indexOf(e.which) >= 0 && onClose("left", false);
-
-    const clickHandler = (e: MouseEvent) =>
-      e.target === current && onClose("left", false);
-
-    if (current) {
-      current.addEventListener("transitionend", transitionEnd);
-      current.addEventListener("click", clickHandler);
-      window.addEventListener("keyup", keyHandler);
-    }
-
-    if (open) {
-      window.setTimeout(() => {
-        (document.activeElement as HTMLElement).blur();
-        setActive(open);
-        (document.querySelector("#root") as Element).setAttribute(
-          "inert",
-          "true"
-        );
-      }, 10);
-    }
-
+    const target =
+      parent && (parent as HTMLElement).appendChild ? parent : document.body;
+    const classList = ["portal-container"];
+    if (className) className.split(" ").forEach((item) => classList.push(item));
+    classList.forEach((item) => el.classList.add(item));
+    target.appendChild(el);
     return () => {
-      if (current) {
-        current.removeEventListener("transitionend", transitionEnd);
-        current.removeEventListener("click", clickHandler);
-      }
-
-      (document.querySelector("#root") as Element).removeAttribute("inert");
-      window.removeEventListener("keyup", keyHandler);
+      target.removeChild(el);
     };
-  }, [open, onClose]);
-
-  return (
-    <>
-      {(open || active) && (
-        <Portal>
-          <div
-            ref={backdrop}
-            className={
-              active && open
-                ? "fixed top-0 bottom-0 left-0 right-0 bg-black/40 transition-colors duration-100 ease-in-out delay-300"
-                : ""
-            }
-          />
-          <aside
-            className={`${className} transition-transform duration-75 ease-in-out delay-200 ${
-              active && open ? "translate-none" : "translate-x-full"
-            }`}
-          >
-            {children}
-          </aside>
-        </Portal>
-      )}
-    </>
-  );
+  }, [el, parent, className]);
+  return createPortal(children, el);
 }
+
+export default Portal;

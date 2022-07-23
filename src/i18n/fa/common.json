@@ -42,5 +42,8 @@
   "The highest score": "بیشترین امتیاز",
   "codeDr": "کد نظام پزشکی",
   "address": "آدرس",
-  "test": "تست"
+  "test": "تست",
+  "resend": "ارسال مجدد کد",
+  "telephone": "شماره همراه",
+  "login": "ورود"
 }

@@ -7,11 +7,12 @@ import { Outlet, useLocation } from "react-router-dom";
 import Sidebar from "./Sidebar";
 
 const Layout: React.FC = (): React.ReactElement => {
-  const { t } = useTranslation();
+  const { t } = useTranslation(["menu"]);
   const { pathname } = useLocation();
 
   const title =
     pathname === "/" ? t("dashboard") : t(pathname?.split("/")[1] as TKeyMenu);
+
   return (
     <>
       <Helmet title={title} />

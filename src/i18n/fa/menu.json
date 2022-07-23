@@ -1,14 +1,14 @@
 {
-  "doshboard": "میزکار",
-  "my turns": "نوبت های من",
-  "my childes": "کودکان من",
-  "Reminder of the turn": "یادآوری نوبت ها",
-  "my cities": "شهرهای من",
-  "results of the experiment": "نتایج آزمایش",
-  "health calculator": "محاسبه گر سلامت",
-  "Next turns": "نوبت های بعدی",
-  "History": "تاریخچه",
-  "Children's show": "نمایش کودکان",
-  "New child registration": "ثبت کودک جدید",
-  "Child growth control robots": "ربات های کنترل رشد کودک"
+  "dashboard": "میزکار",
+  "my-turns": "نوبت های من",
+  "my-children": "کودکان من",
+  "reminder-turn": "یادآوری نوبت ها",
+  "my-cities": "شهرهای من",
+  "results-experiment": "نتایج آزمایش",
+  "health-calculator": "محاسبه گر سلامت",
+  "next-turns": "نوبت های بعدی",
+  "history": "تاریخچه",
+  "children-show": "نمایش کودکان",
+  "new-child-registration": "ثبت کودک جدید",
+  "child-growth-control-robots": "ربات های کنترل رشد کودک"
 }

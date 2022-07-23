@@ -1,4 +1,5 @@
 import ToggleDrawerProvider from "context/drawer";
+import { ThemeProvider } from "context/theme";
 import { BrowserRouter, useRoutes } from "react-router-dom";
 import { routes } from "routes";
 import "./i18n";
@@ -10,11 +11,13 @@ function App() {
 
 function AppWrapper() {
   return (
-    <BrowserRouter>
+    <ThemeProvider>
       <ToggleDrawerProvider>
-        <App />
+        <BrowserRouter>
+          <App />
+        </BrowserRouter>
       </ToggleDrawerProvider>
-    </BrowserRouter>
+    </ThemeProvider>
   );
 }
 
