@@ -31,8 +31,15 @@
     }
 
     body {
-        background-color: #F9FAFB;
         font-size: 15px;
+    }
+
+    .dark body {
+        background-color: #151521
+    }
+
+    .light body {
+        background-color: #F9FAFB;
     }
 }
 

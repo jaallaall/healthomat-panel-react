@@ -23,6 +23,9 @@ module.exports = {
           DEFAULT: "#EFE9E1",
           dark: "#eadfd0",
         },
+        navy: {
+          DEFAULT: "#1e1e2d",
+        },
         primary: {
           light: "#22d3ee",
           DEFAULT: "#8bbee8",

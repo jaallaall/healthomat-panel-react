@@ -33,7 +33,7 @@ const Accordion: React.FC<Props> = ({
     <div>
       <button
         onClick={handleClick}
-        className="flex flex-row w-full text-start items-center h-10 px-3 rounded-lg text-gray-600 hover:bg-tahiti-dark"
+        className="flex flex-row w-full text-start items-center h-10 px-3 rounded-lg hover:bg-tahiti-dark"
       >
         <Icon name={icon} className="me-2" size={25} />
         <span className="flex-auto">{t(title as TKeyMenu)}</span>
