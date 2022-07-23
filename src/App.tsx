@@ -4,7 +4,7 @@ import { routes } from "routes";
 import "./i18n";
 
 function App() {
-  const routeArray = useRoutes(routes);
+  const routeArray = useRoutes(routes(true));
   return routeArray;
 }
 

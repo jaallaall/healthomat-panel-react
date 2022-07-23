@@ -3,7 +3,8 @@ import { Icon, Sidebar } from "@UI";
 import { useMediaQuery, useToggleDrawer } from "hooks";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
-import Menu from "./Menu";
+import { menu } from "utils";
+import Accordion from "./Accordion";
 
 const Layouts: React.FC = (): React.ReactElement => {
   const { t } = useTranslation();
@@ -22,7 +23,17 @@ const Layouts: React.FC = (): React.ReactElement => {
         </Link>
       </div>
       <div className="flex-auto scrollbar p-4 h-full">
-        <Menu />
+        {menu.map((item) => {
+          return (
+            <Accordion
+              key={item.id}
+              submenu={item.submenu}
+              title={item.name}
+              icon={item.icon}
+              href={item.href}
+            />
+          );
+        })}
       </div>
       <div className="m-3">
         <button className="p-3 w-full rounded-lg hover:bg-tahiti-dark">

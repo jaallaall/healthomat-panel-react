@@ -11,3 +11,15 @@ export interface Options {
 export enum Pages {
   Dashboard = "/",
 }
+
+export enum SidebarRoute {
+  Dashboard = "/",
+  NextTurns = "/next-turns",
+  history = "/history",
+  ChildrenShow = "/children-show",
+  NewChildRegistration = "/new-child-registration",
+  ReminderTurn = "/reminder-turn",
+  MyCities = "/my-cities",
+  ResultsExperiment = "/results-experiment",
+  HealthCalculator = "/health-calculator",
+}

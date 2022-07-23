@@ -1,6 +1,6 @@
 import Layout from "components/Layouts";
 import { lazy } from "react";
-import { Helmet } from "react-helmet";
+import { Navigate } from "react-router-dom";
 import { appRoutes } from "./routes";
 
 export const importDemo = (
@@ -11,15 +11,10 @@ export const importDemo = (
   );
 };
 
-export const routes = [
+export const routes = (isLoggedIn: boolean) => [
   {
     path: "/",
-    element: (
-      <>
-        <Helmet title={"healthomat"} />
-        <Layout />
-      </>
-    ),
+    element: isLoggedIn ? <Layout /> : <Navigate to={"/login"} />,
     children: appRoutes.map(({ path, element }) => {
       const Element = importDemo(element);
       return {
