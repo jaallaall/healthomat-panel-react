@@ -69,10 +69,10 @@ module.exports = {
           width: "5px",
         },
         ".scrollbar::-webkit-scrollbar-thumb": {
-          backgroundColor: "var(--navy-dark)",
+          backgroundColor: "var(--tahiti-dark)",
         },
         ".scrollbar::-webkit-scrollbar-track-piece": {
-          backgroundColor: "var(--navy)",
+          backgroundColor: "var(--tahiti)",
         },
       });
     }),
