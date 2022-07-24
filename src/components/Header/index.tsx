@@ -1,6 +1,7 @@
 import { Icon } from "@UI";
 import { useTheme, useToggleDrawer } from "hooks";
 import Auth from "../Auth";
+import Lang from "./Lang";
 import Search from "./Search";
 
 const Header: React.FC = (): React.ReactElement => {
@@ -43,6 +44,7 @@ const Header: React.FC = (): React.ReactElement => {
               <Icon name="moon" size={20} />
             )}
           </label>
+          <Lang />
           <Auth />
         </div>
       </div>
