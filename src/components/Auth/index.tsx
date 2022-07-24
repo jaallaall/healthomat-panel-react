@@ -23,7 +23,7 @@ const Auth: React.FC = (): React.ReactElement => {
   return (
     <div>
       <button
-        className="border border-gray-200 rounded-md w-10 h-10 text-gray-400 flex items-center justify-center ms-2"
+        className="border border-gray-200 rounded-md w-10 h-10 text-gray-400 flex items-center justify-center ms-2 hover:bg-primary hover:text-white hover:border-primary"
         onClick={() => setOpen(true)}
       >
         <Icon name="login" />

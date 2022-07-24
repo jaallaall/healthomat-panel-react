@@ -56,7 +56,7 @@ export const menu = [
       {
         id: 1,
         name: "child-growth-control-robots",
-        href: "/child-growth-control-robots",
+        href: "/health-calculator",
       },
     ],
   },

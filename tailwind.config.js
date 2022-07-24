@@ -13,23 +13,24 @@ module.exports = {
       colors: {
         transparent: "transparent",
         current: "currentColor",
-        white: "#ffffff",
-        black: "#000",
+        white: "var(--white)",
+        // black: "var(--black)",
         gray: {
-          100: "#B5B5C3",
+          50: "#f5f5f5",
         },
         tahiti: {
-          light: "#efe9e1",
-          DEFAULT: "#EFE9E1",
-          dark: "#eadfd0",
+          light: "var(--tahiti-light)",
+          DEFAULT: "var(--tahiti)",
+          dark: "var(--tahiti-dark)",
         },
         navy: {
-          DEFAULT: "#1e1e2d",
+          DEFAULT: "var(--navy)",
+          dark: "var(--navy-dark)",
         },
         primary: {
-          light: "#22d3ee",
-          DEFAULT: "#8bbee8",
-          dark: "#0891b2",
+          light: "var(--primary-light)",
+          DEFAULT: "var(--primary)",
+          dark: "var(--primary-dark)",
         },
         secondary: {
           light: "#22d3ee",
@@ -68,10 +69,10 @@ module.exports = {
           width: "5px",
         },
         ".scrollbar::-webkit-scrollbar-thumb": {
-          backgroundColor: "#eadfd0",
+          backgroundColor: "var(--navy-dark)",
         },
         ".scrollbar::-webkit-scrollbar-track-piece": {
-          backgroundColor: "#efe9e1",
+          backgroundColor: "var(--navy)",
         },
       });
     }),

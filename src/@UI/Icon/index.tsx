@@ -1,4 +1,7 @@
 import styled from "@emotion/styled";
+import { ReactComponent as Logout } from "./svgs/light/arrow-right-from-bracket.svg";
+import { ReactComponent as Login } from "./svgs/light/arrow-right-to-bracket.svg";
+import { ReactComponent as Bars } from "./svgs/light/bars.svg";
 import { ReactComponent as BellOn } from "./svgs/light/bell-on.svg";
 import { ReactComponent as ChevronDown } from "./svgs/light/chevron-down.svg";
 import { ReactComponent as ChevronLeft } from "./svgs/light/chevron-left.svg";
@@ -9,12 +12,10 @@ import { ReactComponent as City } from "./svgs/light/city.svg";
 import { ReactComponent as Display } from "./svgs/light/display.svg";
 import { ReactComponent as Flask } from "./svgs/light/flask.svg";
 import { ReactComponent as HeartPulse } from "./svgs/light/heart-pulse.svg";
-import { ReactComponent as Doctor } from "./svgs/light/user-doctor.svg";
-import { ReactComponent as Bars } from "./svgs/light/bars.svg";
-import { ReactComponent as Logout } from "./svgs/light/arrow-right-from-bracket.svg";
-import { ReactComponent as Login } from "./svgs/light/arrow-right-to-bracket.svg";
+import { ReactComponent as LineHeight } from "./svgs/light/line-height.svg";
 import { ReactComponent as Moon } from "./svgs/light/moon.svg";
 import { ReactComponent as Sun } from "./svgs/light/sun-bright.svg";
+import { ReactComponent as Doctor } from "./svgs/light/user-doctor.svg";
 import { ReactComponent as Close } from "./svgs/light/xmark.svg";
 
 const SpanStyled = styled("span")<{ size: number }>(({ size }) => ({
@@ -53,6 +54,7 @@ const iconTypes: IconTypes = {
   sun: Sun,
   login: Login,
   close: Close,
+  lineHeight: LineHeight,
 };
 
 const Icon = ({
