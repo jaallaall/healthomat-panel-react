@@ -10,7 +10,7 @@ const Layouts: React.FC = (): React.ReactElement => {
   const matches = useMediaQuery("(min-width:600px)");
   const { state, toggleDrawer } = useToggleDrawer();
 
-  const classes = `shadow flex flex-col bg-navy text-gray-100 w-72 fixed top-0 start-0 bottom-0 z-50`;
+  const classes = `shadow flex flex-col bg-tahiti text-gray-500 w-72 fixed top-0 start-0 bottom-0 z-50`;
 
   const sidebar = (
     <>
@@ -34,10 +34,14 @@ const Layouts: React.FC = (): React.ReactElement => {
           );
         })}
       </div>
-      <div className="m-3">
+      <div className="m-3 flex">
         <button className="p-3 w-full rounded-lg hover:text-primary">
           <Icon name="logout" className="align-middle me-2" />
           <span>{t("logout")}</span>
+        </button>
+        <button className="p-3 w-full rounded-lg hover:text-primary">
+          <Icon name="gear" className="align-middle me-2" />
+          <span>{t("setting")}</span>
         </button>
       </div>
     </>

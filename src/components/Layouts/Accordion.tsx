@@ -33,7 +33,7 @@ const Accordion: React.FC<Props> = ({
     <div>
       <button
         onClick={handleClick}
-        className="flex flex-row w-full text-start items-center h-10 px-3 rounded-lg hover:text-primary"
+        className="flex flex-row w-full text-start items-center p-3 rounded-lg hover:text-primary"
       >
         <Icon name={icon} className="me-2" size={25} />
         <span className="flex-auto">{t(title as TKeyMenu)}</span>
@@ -64,7 +64,7 @@ const Accordion: React.FC<Props> = ({
               <button
                 key={it.id}
                 onClick={() => navigate(it.href)}
-                className="flex flex-row w-full items-center py-2 px-3 rounded-lg hover:text-primary before:content-[''] before:w-1.5 before:h-1.5 before:bg-gray-100 before:rounded-full before:me-1"
+                className="flex flex-row w-full items-center py-2 px-3 rounded-lg hover:text-primary before:w-1.5 before:h-1.5 before:bg-gray-100 before:rounded-full before:me-2"
               >
                 {t(it.name as TKeyMenu)}
               </button>

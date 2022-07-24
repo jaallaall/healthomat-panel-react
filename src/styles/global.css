@@ -4,13 +4,20 @@
 
 .light {
     --bg-color: #F9FAFB;
-    --primary: #009ef7;
-    --primary-light: #22d3ee;
-    --primary-dark: #0891b2;
+    --primary: #8bbee8;
+    --primary-light: #b7dcfa;
+    --primary-dark: #5794c7;
+    --secondary: #d7a9e3;
+    --secondary-light: #ecc7f5;
+    --secondary-dark: #b476c4;
+    --success: #a8d5ba;
+    --success-light: #dbf8e7;
+    --success-dark: #74b48d;
     --navy: #1e1e2d;
     --navy-light: #3a3a41;
     --navy-dark: #141429;
-    --white: #fff
+    --white: #fff;
+    --tahiti: #efe9e1
 }
 
 .dark {
@@ -21,7 +28,8 @@
     --navy: #1e1e2d;
     --navy-light: #3a3a41;
     --navy-dark: #141429;
-    --white: #141429
+    --white: #141429;
+    --tahiti: #141429
 }
 
 @layer base {

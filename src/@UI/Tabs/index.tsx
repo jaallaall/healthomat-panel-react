@@ -35,11 +35,11 @@ const Tabs: React.FC<TabsProps> = ({
       >
         {tabs.map((tab) => (
           <button
-            className={`px-2 md:py-4 py-2 flex-grow text-center cursor-pointer bg-gray-50 relative first-of-type:rounded-s-xl last-of-type:rounded-e-xl hover:text-primary  ${
+            className={`px-2 md:py-4 py-2 flex-grow text-center cursor-pointer bg-[#f5f8fa] relative first-of-type:rounded-s-xl last-of-type:rounded-e-xl hover:text-primary  ${
               tab.index > 1
                 ? "before:border-l before:absolute before:top-2 before:bottom-2 before:start-0"
                 : ""
-            } ${selectedTab === tab.index ? "text-primary" : "text-gray-400"}`}
+            } ${selectedTab === tab.index ? "text-primary" : "text-gray-500"}`}
             onClick={() => onClick(tab.index)}
             key={tab.index}
             type="button"

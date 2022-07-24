@@ -18,6 +18,7 @@ import { ReactComponent as Sun } from "./svgs/light/sun-bright.svg";
 import { ReactComponent as Doctor } from "./svgs/light/user-doctor.svg";
 import { ReactComponent as Close } from "./svgs/light/xmark.svg";
 import { ReactComponent as User } from "./svgs/light/user.svg";
+import { ReactComponent as Gear } from "./svgs/light/gear.svg";
 
 const SpanStyled = styled("span")<{ size: number }>(({ size }) => ({
   svg: {
@@ -57,6 +58,7 @@ const iconTypes: IconTypes = {
   close: Close,
   lineHeight: LineHeight,
   user: User,
+  gear: Gear,
 };
 
 const Icon = ({

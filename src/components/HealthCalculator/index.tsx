@@ -28,6 +28,12 @@ const tabs: TabsType = [
     Component: () => <div>tab3</div>,
     icon: "lineHeight",
   },
+  {
+    label: "قد بر حسب سن",
+    index: 4,
+    Component: () => <div>tab4</div>,
+    icon: "lineHeight",
+  },
 ];
 
 const HealthCalculator: React.FC = (): React.ReactElement => {
