@@ -22,6 +22,7 @@ module.exports = {
           light: "var(--tahiti-light)",
           DEFAULT: "var(--tahiti)",
           dark: "var(--tahiti-dark)",
+          500: "var(--tahiti-500)",
         },
         navy: {
           DEFAULT: "var(--navy)",
