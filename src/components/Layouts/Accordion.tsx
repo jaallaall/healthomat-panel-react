@@ -64,7 +64,7 @@ const Accordion: React.FC<Props> = ({
               <button
                 key={it.id}
                 onClick={() => navigate(it.href)}
-                className="flex flex-row w-full items-center p-3 rounded-lg hover:text-primary before:content-[''] before:w-1.5 before:h-1.5 before:bg-gray-100 before:rounded-full before:me-1"
+                className="flex flex-row w-full items-center py-2 px-3 rounded-lg hover:text-primary before:content-[''] before:w-1.5 before:h-1.5 before:bg-gray-100 before:rounded-full before:me-1"
               >
                 {t(it.name as TKeyMenu)}
               </button>

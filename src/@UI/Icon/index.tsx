@@ -17,6 +17,7 @@ import { ReactComponent as Moon } from "./svgs/light/moon.svg";
 import { ReactComponent as Sun } from "./svgs/light/sun-bright.svg";
 import { ReactComponent as Doctor } from "./svgs/light/user-doctor.svg";
 import { ReactComponent as Close } from "./svgs/light/xmark.svg";
+import { ReactComponent as User } from "./svgs/light/user.svg";
 
 const SpanStyled = styled("span")<{ size: number }>(({ size }) => ({
   svg: {
@@ -55,6 +56,7 @@ const iconTypes: IconTypes = {
   login: Login,
   close: Close,
   lineHeight: LineHeight,
+  user: User,
 };
 
 const Icon = ({
