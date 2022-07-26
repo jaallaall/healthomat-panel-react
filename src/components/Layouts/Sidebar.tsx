@@ -21,7 +21,7 @@ const Layouts: React.FC = (): React.ReactElement => {
           </span>
         </Link>
       </div>
-      <div className="flex-auto scrollbar p-4 h-full">
+      <div className="flex-auto scrollbar px-4 pt-8 pb-4 h-full">
         {menu.map((item) => {
           return (
             <Accordion
