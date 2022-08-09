@@ -9,6 +9,12 @@ interface Props {
   submenu?: Options[];
   icon: string;
   href: string;
+  onClose: (
+    anchor: "left",
+    open: boolean
+  ) => (
+    event: React.KeyboardEvent<Element> | React.MouseEvent<Element, MouseEvent>
+  ) => void;
 }
 
 const Accordion: React.FC<Props> = ({
@@ -16,6 +22,7 @@ const Accordion: React.FC<Props> = ({
   submenu,
   icon,
   href,
+  onClose,
 }): React.ReactElement => {
   const { t } = useTranslation(["menu"]);
   const navigate = useNavigate();
@@ -26,8 +33,14 @@ const Accordion: React.FC<Props> = ({
   const handleClick = () => {
     if (!submenu) {
       navigate(href);
+      return onClose("left", false);
     }
     setOpen(!open);
+  };
+
+  const handleClickSub = (href: string) => {
+    navigate(href);
+    return onClose("left", false);
   };
   return (
     <div>
@@ -63,7 +76,7 @@ const Accordion: React.FC<Props> = ({
             return (
               <button
                 key={it.id}
-                onClick={() => navigate(it.href)}
+                onClick={() => handleClickSub(it.href)}
                 className="flex flex-row w-full items-center py-2 px-3 rounded-lg hover:text-tahiti-500 before:w-1.5 before:h-1.5 before:bg-tahiti-dark before:rounded-full before:me-2"
               >
                 {t(it.name as TKeyMenu)}

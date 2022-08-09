@@ -5,7 +5,7 @@ import { routes } from "routes";
 import "./i18n";
 
 function App() {
-  const routeArray = useRoutes(routes(true));
+  const routeArray = useRoutes(routes(false));
   return routeArray;
 }
 

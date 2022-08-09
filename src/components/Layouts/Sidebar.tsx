@@ -30,6 +30,7 @@ const Layouts: React.FC = (): React.ReactElement => {
               title={item.name}
               icon={item.icon}
               href={item.href}
+              onClose={toggleDrawer}
             />
           );
         })}

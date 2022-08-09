@@ -22,4 +22,5 @@ export enum SidebarRoute {
   MyCities = "/my-cities",
   ResultsExperiment = "/results-experiment",
   HealthCalculator = "/health-calculator",
+  Login = "/login",
 }

@@ -1,48 +1,62 @@
-import { Icon, Modal } from "@UI";
-import { useCountDown } from "hooks";
-import { useState } from "react";
-import { useTranslation } from "react-i18next";
-import PinCode from "./PinCode";
 import { useFormik } from "formik";
+import { useTranslation } from "react-i18next";
 import { validationSchema } from "utils";
 
 const Auth: React.FC = (): React.ReactElement => {
   const { t } = useTranslation();
-  const [timeLeft, { start, pause, resume, reset }] = useCountDown();
-  const [open, setOpen] = useState<boolean>(false);
 
-  const { handleSubmit, values, touched, errors } = useFormik({
+  const { handleSubmit, values, handleChange, touched, errors } = useFormik({
     enableReinitialize: true,
     initialValues: {
-      telephone: "",
+      username: "",
+      password: "",
     },
     validationSchema: validationSchema,
-    onSubmit: (values, { resetForm }) => {},
+    onSubmit: (values, { resetForm }) => {
+      console.log(values);
+    },
   });
 
   return (
-    <div>
-      <button
-        className="border border-gray-200 rounded-md w-10 h-10 text-gray-400 flex items-center justify-center ms-2 hover:bg-primary hover:text-white hover:border-primary"
-        onClick={() => setOpen(true)}
-      >
-        <Icon name="login" />
-      </button>
-      <Modal open={open} onClose={() => setOpen(false)}>
-        <div className="flex items-center justify-between mb-4">
-          <h5>{t("login")}</h5>
-          <button onClick={() => setOpen(false)}>
-            <Icon name="close" />
-          </button>
-        </div>
-        <form>
+    <div className="container m-auto px-4 max-w-md">
+      <div className="bg-white p-3 rounded-lg border">
+        <h3 className="mb-3 text-xl">{t("login")}</h3>
+        <form onSubmit={handleSubmit}>
           <input
             type="text"
-            className="block border border-grey-light w-full p-3 rounded mb-4"
-            name="telephone"
-            placeholder={t("telephone")}
+            className={`block border w-full p-3 rounded mb-3 ${
+              touched.username && errors.username
+                ? "border-red-500"
+                : "border-grey-light"
+            }`}
+            name="username"
+            placeholder={t("username")}
+            onChange={handleChange}
+            value={values.username}
           />
-          <PinCode />
+          {touched.username && errors.username && (
+            <div className="text-red-500 -mt-2 mb-3 text-sm">
+              {errors.username}
+            </div>
+          )}
+          <input
+            type="text"
+            className={`block border w-full p-3 rounded mb-3 ${
+              touched.username && errors.username
+                ? "border-red-500"
+                : "border-grey-light"
+            }`}
+            name="password"
+            placeholder={t("password")}
+            onChange={handleChange}
+            value={values.password}
+          />
+
+          {touched.password && errors.password && (
+            <div className="text-red-500 -mt-2 mb-3 text-sm">
+              {errors.password}
+            </div>
+          )}
           <button
             type="submit"
             className="w-full text-center py-3 rounded bg-primary text-white hover:bg-primary-dark focus:outline-none my-1"
@@ -50,7 +64,7 @@ const Auth: React.FC = (): React.ReactElement => {
             {t("login")}
           </button>
         </form>
-      </Modal>
+      </div>
     </div>
   );
 };

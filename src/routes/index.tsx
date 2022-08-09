@@ -11,6 +11,8 @@ export const importDemo = (
   );
 };
 
+const Login = importDemo("Auth");
+
 export const routes = (isLoggedIn: boolean) => [
   {
     path: "/",
@@ -23,4 +25,5 @@ export const routes = (isLoggedIn: boolean) => [
       };
     }),
   },
+  { path: "/login", element: <Login /> },
 ];
